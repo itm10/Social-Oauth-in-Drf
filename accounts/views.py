@@ -12,9 +12,10 @@ from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from allauth.socialaccount.models import SocialApp
 from dj_rest_auth.registration.views import SocialLoginView
-from rest_framework.decorators import api_view
 from dotenv import load_dotenv
 
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 load_dotenv()
 User = get_user_model()
 
@@ -85,7 +86,7 @@ class RedirectToGoogleAPIView(GenericAPIView):
 
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
-    callback_url = 'https://6232-213-230-66-5.ngrok-free.app/accounts/google/callback'
+    callback_url = 'https://1ca5-178-218-201-17.ngrok-free.app/accounts/google/callback'
     client_class = OAuth2Client
 
 
@@ -130,4 +131,6 @@ def callback_github(request):
 
     # return ID token to the user which will be used by the user in subsequent requests to verify his identity
     return Response(res.json())
+
+
 

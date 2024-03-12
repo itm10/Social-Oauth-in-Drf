@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'dotenv',
 
     'accounts',
+    'main',
 
     # third-party
     'allauth',

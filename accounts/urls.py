@@ -12,6 +12,6 @@ urlpatterns = [
     path('github-login', RedirectToGithubAPIView.as_view(), name='github_login'),
     path('github', GithubLogin.as_view(), name='github_login'),
     path('google/callback', callback, name='google_callback'),
-    path('github/callback', callback_github, name='github_callback')
+    path('github/callback', callback_github, name='github_callback'),
 
 ]

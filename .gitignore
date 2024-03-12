@@ -8,3 +8,7 @@ db.sqlite3
 /media/
 /static/
 /migrations/
+accounts
+docker-compose.yml
+Dockerfile
+entrypoint.sh
